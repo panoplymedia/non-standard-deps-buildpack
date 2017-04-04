@@ -1,8 +1,14 @@
+APT_CACHE_DIR="/temp_cache/apt/cache"
+APT_OPTIONS="-o dir::cache=$APT_CACHE_DIR"
+
+mkdir -p "$APT_CACHE_DIR"
+apt-get $APT_OPTIONS update
+
 # pull in new source
-apt-get install software-properties-common
-add-apt-repository ppa:mc3man/trusty-media
-apt-get update
+apt-get $APT_OPTIONS install software-properties-common
+add-apt-repository $APT_OPTIONS ppa:mc3man/trusty-media
+apt-get $APT_OPTIONS update
 
 # install ffmpeg
-apt-get install ffmpeg
+apt-get $APT_OPTIONS install ffmpeg
 
