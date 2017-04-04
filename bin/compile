@@ -1,7 +1,7 @@
 # pull in new source
-sudo add-apt-repository ppa:mc3man/trusty-media
-sudo apt-get update
+add-apt-repository ppa:mc3man/trusty-media
+apt-get update
 
 # install ffmpeg
-sudo apt-get install ffmpeg
+apt-get install ffmpeg
 
